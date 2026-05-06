@@ -47,11 +47,17 @@ export default function Experience() {
   const opacityBg = useTransform(scrollYProgress, [0, 0.5, 1], [0.1, 0.5, 0.1]);
 
   return (
-    <section id="experience" ref={containerRef} className="py-32 relative overflow-hidden bg-transparent">
+    <section id="experience" ref={containerRef} className="py-20 lg:py-32 relative overflow-hidden bg-transparent">
       
       {/* ================= MASSIVE WATERMARK ================= */}
-      <div className="absolute top-40 right-0 pointer-events-none select-none z-0 opacity-[0.02] mix-blend-screen">
+      <div className="absolute top-40 right-0 pointer-events-none select-none z-0 opacity-[0.02] mix-blend-screen hidden lg:block">
         <h2 className="text-[12vw] font-black tracking-tighter text-white whitespace-nowrap" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+          JOURNEY
+        </h2>
+      </div>
+
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0 opacity-[0.03] mix-blend-screen lg:hidden">
+        <h2 className="text-[20vw] font-black tracking-tighter text-white whitespace-nowrap">
           JOURNEY
         </h2>
       </div>
@@ -62,11 +68,11 @@ export default function Experience() {
         {/* Animated Grid that moves with scroll */}
         <motion.div 
           style={{ y: yBg, opacity: opacityBg }}
-          className="absolute inset-0 w-full h-[150%] bg-[linear-gradient(rgba(168,85,247,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(168,85,247,0.05)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]"
+          className="absolute inset-0 w-full h-[150%] bg-[linear-gradient(rgba(168,85,247,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(168,85,247,0.05)_1px,transparent_1px)] bg-[size:60px_60px] lg:bg-[size:100px_100px] [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]"
         />
 
-        {/* Floating Geometric Particles */}
-        {Array.from({ length: 6 }).map((_, i) => (
+        {/* Floating Geometric Particles - Reduced for mobile */}
+        {Array.from({ length: 4 }).map((_, i) => (
           <motion.div
             key={i}
             animate={{ 
@@ -81,8 +87,8 @@ export default function Experience() {
               ease: "linear",
               delay: i * 3
             }}
-            className={`absolute bottom-[-10%] ${i % 2 === 0 ? 'border-purple-500/20' : 'border-indigo-500/20'} border w-16 h-16 rounded-lg backdrop-blur-sm`}
-            style={{ left: `${15 + (i * 15)}%` }}
+            className={`absolute bottom-[-10%] ${i % 2 === 0 ? 'border-purple-500/20' : 'border-indigo-500/20'} border w-12 lg:w-16 h-12 lg:h-16 rounded-lg backdrop-blur-sm`}
+            style={{ left: `${20 + (i * 20)}%` }}
           />
         ))}
 
@@ -90,12 +96,12 @@ export default function Experience() {
         <motion.div 
           animate={{ scale: [1, 1.5, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-purple-800/20 rounded-full blur-[100px]"
+          className="absolute top-1/3 right-1/4 w-[300px] lg:w-[400px] h-[300px] lg:h-[400px] bg-purple-800/20 rounded-full blur-[80px] lg:blur-[100px]"
         />
         <motion.div 
           animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-indigo-900/20 rounded-full blur-[120px]"
+          className="absolute bottom-1/4 left-1/4 w-[400px] lg:w-[500px] h-[400px] lg:h-[500px] bg-indigo-900/20 rounded-full blur-[100px] lg:blur-[120px]"
         />
       </div>
 
@@ -107,13 +113,13 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-24"
+          className="text-center mb-16 lg:mb-24"
         >
           <div className="inline-flex items-center gap-3 mb-4 px-4 py-2 rounded-full border border-purple-500/20 bg-purple-500/5 backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
             <span className="text-purple-300 font-space font-medium uppercase tracking-widest text-xs">Experience</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold font-space text-white leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold font-space text-white leading-tight">
             Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-white">Journey.</span>
           </h2>
         </motion.div>
@@ -122,7 +128,7 @@ export default function Experience() {
         <div className="max-w-5xl mx-auto relative">
           
           {/* Advanced Central Glowing Line */}
-          <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-[2px] md:-translate-x-1/2 bg-white/5">
+          <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-[2px] md:-translate-x-1/2 bg-white/5">
             <motion.div 
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
@@ -138,7 +144,7 @@ export default function Experience() {
             />
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-12 lg:space-y-16">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -146,12 +152,12 @@ export default function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.7, delay: index * 0.2 }}
-                className={`relative flex flex-col md:flex-row items-center gap-8 ${
+                className={`relative flex flex-col md:flex-row items-center gap-6 lg:gap-8 ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
                 {/* Timeline Center Node (Holographic Design) */}
-                <div className="absolute left-[12px] md:left-1/2 w-8 h-8 md:-translate-x-1/2 z-20 flex items-center justify-center">
+                <div className="absolute left-[0px] md:left-1/2 w-8 h-8 md:-translate-x-1/2 z-20 flex items-center justify-center">
                   <motion.div 
                     initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 + (index * 0.2), type: "spring" }}
                     className="absolute inset-0 bg-[#0a0414] border-2 border-purple-500 rounded-full"
@@ -164,37 +170,37 @@ export default function Experience() {
                 </div>
 
                 {/* Content Card container */}
-                <div className={`ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pl-16" : "md:pr-16"} w-full relative group`}>
+                <div className={`ml-10 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pl-12 lg:pl-16" : "md:pr-12 lg:pr-16"} w-full relative group`}>
                   
                   {/* Connecting dashed line from node to card (desktop only) */}
-                  <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-16 border-t border-dashed border-purple-500/30 ${index % 2 === 0 ? "left-0" : "right-0"}`}></div>
+                  <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-12 lg:w-16 border-t border-dashed border-purple-500/30 ${index % 2 === 0 ? "left-0" : "right-0"}`}></div>
 
                   {/* The Glass Card */}
-                  <div className="glass-card p-8 rounded-3xl border border-white/5 relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-purple-500/40 hover:shadow-[0_20px_40px_rgba(168,85,247,0.15)] bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-xl">
+                  <div className="glass-card p-6 lg:p-8 rounded-3xl border border-white/5 relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-purple-500/40 hover:shadow-[0_20px_40px_rgba(168,85,247,0.15)] bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-xl active:scale-[0.98]">
                     
                     {/* Background glow on hover inside card */}
                     <div className="absolute -inset-20 bg-gradient-to-br from-purple-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl pointer-events-none"></div>
                     
                     {/* Top row: Icon & Date */}
-                    <div className="flex flex-wrap items-center justify-between gap-4 mb-6 relative z-10">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${exp.color} p-[1px] shadow-lg`}>
+                    <div className="flex flex-wrap items-center justify-between gap-4 mb-4 lg:mb-6 relative z-10">
+                      <div className={`w-12 h-12 lg:w-14 lg:h-14 rounded-2xl bg-gradient-to-br ${exp.color} p-[1px] shadow-lg`}>
                         <div className="w-full h-full bg-[#0c120c] rounded-2xl flex items-center justify-center">
                           {exp.icon}
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
-                        <Calendar size={14} className="text-purple-400" />
-                        <span className="text-sm font-medium text-gray-300">{exp.period}</span>
+                      <div className="flex items-center gap-2 px-3 lg:px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+                        <Calendar size={12} className="text-purple-400" />
+                        <span className="text-xs lg:text-sm font-medium text-gray-300">{exp.period}</span>
                       </div>
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-white mb-2 relative z-10 tracking-tight">{exp.title}</h3>
+                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-1 lg:mb-2 relative z-10 tracking-tight">{exp.title}</h3>
                     
-                    <div className="flex items-center gap-2 mb-6 relative z-10">
-                      <span className="text-purple-400 font-medium">{exp.company}</span>
+                    <div className="flex items-center gap-2 mb-4 lg:mb-6 relative z-10">
+                      <span className="text-purple-400 text-sm lg:text-base font-medium">{exp.company}</span>
                     </div>
                     
-                    <p className="text-gray-400 mb-8 relative z-10 leading-relaxed text-sm md:text-base">
+                    <p className="text-gray-400 mb-6 lg:mb-8 relative z-10 leading-relaxed text-sm md:text-base">
                       {exp.description}
                     </p>
                     
@@ -203,9 +209,9 @@ export default function Experience() {
                       {exp.skills.map((skill, sIndex) => (
                         <span
                           key={sIndex}
-                          className="px-3 py-1 bg-[#0c120c]/80 text-gray-300 rounded-lg text-xs font-medium border border-white/10 flex items-center gap-1 group-hover:border-purple-500/30 transition-colors"
+                          className="px-2.5 py-1 bg-[#0c120c]/80 text-gray-300 rounded-lg text-[10px] lg:text-xs font-medium border border-white/10 flex items-center gap-1 group-hover:border-purple-500/30 transition-colors"
                         >
-                          <ChevronRight size={12} className="text-purple-500" />
+                          <ChevronRight size={10} className="text-purple-500" />
                           {skill}
                         </span>
                       ))}
