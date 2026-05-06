@@ -47,7 +47,7 @@ export default function Experience() {
   const opacityBg = useTransform(scrollYProgress, [0, 0.5, 1], [0.1, 0.5, 0.1]);
 
   return (
-    <section id="experience" ref={containerRef} className="py-32 relative overflow-hidden bg-[#110720]">
+    <section id="experience" ref={containerRef} className="py-32 relative overflow-hidden bg-transparent">
       
       {/* ================= MASSIVE WATERMARK ================= */}
       <div className="absolute top-40 right-0 pointer-events-none select-none z-0 opacity-[0.02] mix-blend-screen">
@@ -114,7 +114,7 @@ export default function Experience() {
             <span className="text-purple-300 font-space font-medium uppercase tracking-widest text-xs">Experience</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-bold font-space text-white leading-tight">
-            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Journey.</span>
+            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-white">Journey.</span>
           </h2>
         </motion.div>
 
@@ -178,7 +178,7 @@ export default function Experience() {
                     {/* Top row: Icon & Date */}
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-6 relative z-10">
                       <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${exp.color} p-[1px] shadow-lg`}>
-                        <div className="w-full h-full bg-[#110720] rounded-2xl flex items-center justify-center">
+                        <div className="w-full h-full bg-[#0c120c] rounded-2xl flex items-center justify-center">
                           {exp.icon}
                         </div>
                       </div>
@@ -203,7 +203,7 @@ export default function Experience() {
                       {exp.skills.map((skill, sIndex) => (
                         <span
                           key={sIndex}
-                          className="px-3 py-1 bg-[#110720]/80 text-gray-300 rounded-lg text-xs font-medium border border-white/10 flex items-center gap-1 group-hover:border-purple-500/30 transition-colors"
+                          className="px-3 py-1 bg-[#0c120c]/80 text-gray-300 rounded-lg text-xs font-medium border border-white/10 flex items-center gap-1 group-hover:border-purple-500/30 transition-colors"
                         >
                           <ChevronRight size={12} className="text-purple-500" />
                           {skill}

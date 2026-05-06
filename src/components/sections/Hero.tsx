@@ -8,7 +8,7 @@ import { TypeAnimation } from 'react-type-animation';
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-transparent">
-      
+
       {/* 1. MASSIVE BACKGROUND WATERMARK TEXT */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-none select-none z-0 opacity-[0.03]">
         <h1 className="text-[15vw] font-black tracking-tighter text-white whitespace-nowrap">
@@ -20,15 +20,15 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         {/* Animated Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)]"></div>
-        
+
         {/* Glowing Orbs */}
-        <motion.div 
-          animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.3, 0.1] }} 
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.3, 0.1] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[10%] left-[10%] w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[120px] mix-blend-screen"
         />
-        <motion.div 
-          animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1] }} 
+        <motion.div
+          animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-indigo-600/30 rounded-full blur-[150px] mix-blend-screen"
         />
@@ -36,10 +36,10 @@ export default function Hero() {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* ================= TEXT CONTENT ================= */}
           <div className="lg:col-span-7 space-y-8">
-            
+
             {/* Animated Status Pill */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function Hero() {
                     animate={{ pathLength: 1, opacity: 1 }}
                     transition={{ duration: 1.5, delay: 1 }}
                   >
-                    <path d="M5 15Q100 -5 295 15" stroke="url(#paint0_linear)" strokeWidth="4" strokeLinecap="round"/>
+                    <path d="M5 15Q100 -5 295 15" stroke="url(#paint0_linear)" strokeWidth="4" strokeLinecap="round" />
                     <defs>
                       <linearGradient id="paint0_linear" x1="0" y1="0" x2="300" y2="0" gradientUnits="userSpaceOnUse">
                         <stop stopColor="#a855f7" />
@@ -85,7 +85,7 @@ export default function Hero() {
                   </motion.svg>
                 </span>
               </h2>
-              
+
               {/* Type Animation Box */}
               <div className="h-12 mt-6">
                 <h3 className="text-2xl md:text-3xl font-light text-gray-300 flex items-center gap-2">
@@ -105,7 +105,7 @@ export default function Hero() {
                   </span>
                 </h3>
               </div>
-              
+
               <p className="text-lg text-gray-400 max-w-xl leading-relaxed mt-4">
                 Fusing data-driven marketing with impenetrable cyber defense to build brands that not only scale, but remain secure in a volatile digital landscape.
               </p>
@@ -118,8 +118,8 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap items-center gap-5 pt-6"
             >
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="group relative px-8 py-4 bg-white text-[#110720] rounded-full font-bold transition-all flex items-center gap-3 overflow-hidden hover:scale-[1.02] shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -127,9 +127,9 @@ export default function Hero() {
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </a>
-              
-              <a 
-                href="/resume.pdf" 
+
+              <a
+                href="/resume.pdf"
                 target="_blank"
                 className="group px-8 py-4 bg-[#110720] border border-purple-500/30 hover:border-purple-400 text-white rounded-full font-medium transition-all flex items-center gap-3 hover:bg-purple-900/20"
               >
@@ -141,21 +141,21 @@ export default function Hero() {
 
           {/* ================= HIGH-END VISUAL/IMAGE CONTENT ================= */}
           <div className="lg:col-span-5 relative mt-16 lg:mt-0 flex justify-center lg:justify-end perspective-1000">
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
               transition={{ duration: 1.2, delay: 0.3, type: "spring" }}
               className="relative w-full max-w-[400px]"
             >
-              
+
               {/* Animated Orbital Rings */}
-              <motion.div 
+              <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                 className="absolute -inset-10 border border-white/5 border-dashed rounded-full pointer-events-none"
               />
-              <motion.div 
+              <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
                 className="absolute -inset-20 border border-purple-500/10 rounded-full pointer-events-none"
@@ -167,29 +167,31 @@ export default function Hero() {
 
               {/* Advanced Image Container (Tall Arch / Pill Shape) */}
               <div className="relative aspect-[3/4] rounded-t-full rounded-b-[3rem] p-3 glass-card border border-white/10 shadow-2xl group overflow-visible">
-                
+
                 {/* Image Glow Behind */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/30 to-indigo-600/30 blur-2xl -z-10 opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                 <div className="w-full h-full rounded-t-full rounded-b-[2.5rem] overflow-hidden relative border border-white/5 bg-[#0a0414]">
                   {/* The Image */}
-                  <Image 
-                    src="/profile.jpg" 
+                  <Image
+                    src="/images/hero-profile-final.png"
                     alt="Mahammad Shamsuddeen"
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
                     priority
-                    className="object-cover object-center group-hover:scale-110 transition-transform duration-1000 ease-out"
+                    className="object-cover object-center brightness-110 contrast-105 saturate-[1.1] group-hover:scale-110 transition-transform duration-1000 ease-out"
                   />
-                  
-                  {/* Overlays for aesthetic depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#110720] via-[#110720]/20 to-transparent opacity-80 z-10"></div>
-                  <div className="absolute inset-0 bg-purple-900/10 mix-blend-overlay z-10"></div>
+
+                  {/* Overlays for aesthetic depth - reduced opacity to keep face bright */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#110720] via-transparent to-transparent opacity-50 z-10"></div>
+                  <div className="absolute inset-0 bg-white/5 mix-blend-overlay z-10"></div>
+                  {/* Subtle top light highlight */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-400/20 via-transparent to-transparent z-10 pointer-events-none"></div>
                 </div>
 
                 {/* Floating Aesthetic Badges (Glassmorphism) */}
-                <motion.div 
-                  animate={{ y: [-10, 10, -10] }} 
+                <motion.div
+                  animate={{ y: [-10, 10, -10] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute top-1/4 -right-12 glass-card px-4 py-3 rounded-2xl flex items-center gap-3 border border-purple-500/30 shadow-[0_10px_30px_rgba(0,0,0,0.5)] backdrop-blur-xl z-20"
                 >
@@ -197,12 +199,12 @@ export default function Hero() {
                     <Sparkles size={18} className="text-purple-300" />
                   </div>
                   <div>
-                    <p className="text-white text-xs font-bold leading-tight">Digital<br/>Marketing</p>
+                    <p className="text-white text-xs font-bold leading-tight">Digital<br />Marketing</p>
                   </div>
                 </motion.div>
 
-                <motion.div 
-                  animate={{ y: [10, -10, 10] }} 
+                <motion.div
+                  animate={{ y: [10, -10, 10] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   className="absolute bottom-1/4 -left-10 glass-card px-4 py-3 rounded-2xl flex items-center gap-3 border border-indigo-500/30 shadow-[0_10px_30px_rgba(0,0,0,0.5)] backdrop-blur-xl z-20"
                 >
@@ -210,27 +212,27 @@ export default function Hero() {
                     <ShieldCheck size={18} className="text-indigo-300" />
                   </div>
                   <div>
-                    <p className="text-white text-xs font-bold leading-tight">Cyber<br/>Security</p>
+                    <p className="text-white text-xs font-bold leading-tight">Cyber<br />Security</p>
                   </div>
                 </motion.div>
 
-                <motion.div 
-                  animate={{ y: [-5, 5, -5], x: [0, 5, 0] }} 
+                <motion.div
+                  animate={{ y: [-5, 5, -5], x: [0, 5, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                   className="absolute -bottom-6 right-4 glass-card p-3 rounded-full border border-white/20 shadow-xl z-20"
                 >
                   <Activity size={24} className="text-white" />
                 </motion.div>
-                
+
               </div>
             </motion.div>
           </div>
 
         </div>
       </div>
-      
+
       {/* Scroll Down Indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
@@ -238,7 +240,7 @@ export default function Hero() {
       >
         <p className="text-xs text-gray-500 uppercase tracking-[0.2em]">Scroll</p>
         <div className="w-6 h-10 border border-gray-600 rounded-full flex justify-center p-1">
-          <motion.div 
+          <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="w-1 h-2 bg-purple-500 rounded-full"

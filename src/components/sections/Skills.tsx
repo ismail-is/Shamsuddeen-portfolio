@@ -148,7 +148,7 @@ export default function Skills() {
                       <span className={`text-${category.color}-400 font-space font-bold`}>{skill.level}%</span>
                     </div>
                     {/* Progress Bar Track */}
-                    <div className="h-2 w-full bg-[#110720] rounded-full overflow-hidden border border-white/5 relative">
+                    <div className="h-2 w-full bg-[#0c120c] rounded-full overflow-hidden border border-white/5 relative">
                       {/* Animated Progress Fill */}
                       <motion.div 
                         initial={{ width: 0 }}
@@ -175,3 +175,4 @@ export default function Skills() {
       </div>
     </section>
   );
+}

@@ -1,12 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function GlobalBackground() {
   const [mounted, setMounted] = useState(false);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

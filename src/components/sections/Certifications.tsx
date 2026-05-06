@@ -7,12 +7,12 @@ const certs = [
   { name: "Digital Marketing Certificate", org: "Google / Meta", color: "from-purple-500/20 to-transparent" },
   { name: "Cyber Security Certificate", org: "Cisco / CompTIA", color: "from-indigo-500/20 to-transparent" },
   { name: "Introduction to Human Communication", org: "University Course", color: "from-blue-500/20 to-transparent" },
-  { name: "Introduction to Ethical Hacking", org: "Cyber Academy", color: "from-emerald-500/20 to-transparent" },
+  { name: "Introduction to Ethical Hacking", org: "Cyber Academy", color: "from-purple-500/20 to-transparent" },
 ];
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-24 relative overflow-hidden bg-[#110720]/50">
+    <section id="certifications" className="py-24 relative overflow-hidden bg-transparent">
       <div className="container mx-auto px-6 md:px-12">
         
         <motion.div

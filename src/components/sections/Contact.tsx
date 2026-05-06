@@ -21,7 +21,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-[#110720]/80 border-t border-purple-500/10">
+    <section id="contact" className="py-24 relative overflow-hidden bg-transparent border-t border-purple-500/10">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -35,7 +35,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold font-space text-white mb-4">
-            Let's Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Together</span>
+            Let&apos;s Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Together</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-transparent mx-auto rounded-full"></div>
         </motion.div>
@@ -53,7 +53,7 @@ export default function Contact() {
             <div>
               <h3 className="text-3xl font-bold text-white mb-4 font-space">Get In Touch</h3>
               <p className="text-gray-400 leading-relaxed max-w-md">
-                Whether you have a question, a project proposal, or just want to say hi, I'll try my best to get back to you!
+                Whether you have a question, a project proposal, or just want to say hi, I&apos;ll try my best to get back to you!
               </p>
             </div>
 
@@ -145,7 +145,7 @@ export default function Contact() {
                   value={formState.message}
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all resize-none placeholder:text-gray-600"
-                  placeholder="Hello, I'd like to talk about..."
+                  placeholder="Hello, I&apos;d like to talk about..."
                 />
               </div>
 

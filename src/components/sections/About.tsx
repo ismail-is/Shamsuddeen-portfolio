@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Terminal, Target, Award, Rocket, ShieldCheck, Zap, Crosshair } from "lucide-react";
+import { Target, Award, Rocket, ShieldCheck, Zap } from "lucide-react";
 
 export default function About() {
   const stats = [
@@ -11,7 +11,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-32 relative overflow-hidden bg-[#0a0414]">
+    <section id="about" className="py-32 relative overflow-hidden bg-transparent">
       
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent opacity-50 pointer-events-none" />
@@ -64,7 +64,7 @@ export default function About() {
             <QuoteIcon className="absolute top-8 right-10 w-24 h-24 text-white/5 rotate-12" />
             
             <h3 className="text-3xl md:text-4xl font-space font-bold text-white mb-6 leading-tight relative z-10">
-              I don't just drive traffic. <br className="hidden md:block"/>
+              I don&apos;t just drive traffic. <br className="hidden md:block"/>
               <span className="text-gray-400">I secure the destination.</span>
             </h3>
             
@@ -73,7 +73,7 @@ export default function About() {
                 As a passionate <strong className="text-white">Digital Marketing Specialist</strong> and <strong className="text-white">Cyber Security Analyst</strong>, I sit at a unique intersection of the tech world. Most marketers focus solely on exposure, while security analysts focus solely on defense. I bridge that gap.
               </p>
               <p>
-                My approach is deeply analytical. Whether it's optimizing a web platform for search engines, executing high-conversion ad campaigns, or actively auditing a network for zero-day vulnerabilities, my goal is the same: <span className="text-purple-300">To ensure my clients' digital presence is both dominant and impenetrable.</span>
+                My approach is deeply analytical. Whether it&apos;s optimizing a web platform for search engines, executing high-conversion ad campaigns, or actively auditing a network for zero-day vulnerabilities, my goal is the same: <span className="text-purple-300">To ensure my clients&apos; digital presence is both dominant and impenetrable.</span>
               </p>
             </div>
           </motion.div>
@@ -125,7 +125,7 @@ export default function About() {
               <svg viewBox="0 0 100 50" preserveAspectRatio="none" className="w-full h-full">
                 <motion.path 
                   d="M0 50 C 20 40, 40 10, 60 30 C 80 50, 90 20, 100 0" 
-                  fill="none" stroke="#a855f7" strokeWidth="2"
+                  fill="none" stroke="#10b981" strokeWidth="2"
                   initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 2, ease: "easeOut" }}
                 />
               </svg>
@@ -156,7 +156,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
               className="md:col-span-4 glass-card rounded-[2rem] p-8 border border-white/5 flex items-center gap-6 hover:bg-white/[0.02] transition-colors group"
             >
-              <div className="w-16 h-16 rounded-2xl bg-[#110720] border border-white/10 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 rounded-2xl bg-[#0c120c] border border-white/10 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}
               </div>
               <div>

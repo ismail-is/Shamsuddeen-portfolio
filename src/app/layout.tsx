@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import GlobalBackground from "@/components/GlobalBackground";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -82,6 +83,7 @@ export default function RootLayout({
         <SmoothScroll>
           <GlobalBackground />
           <CustomCursor />
+          <ScrollToTop />
           <Navbar />
           <main className="flex flex-col min-h-screen">
             {children}
