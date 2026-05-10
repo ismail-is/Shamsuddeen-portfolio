@@ -5,8 +5,8 @@ import { Target, Award, Rocket, ShieldCheck, Zap } from "lucide-react";
 
 export default function About() {
   const stats = [
-    { label: "Years Experience", value: "3+", icon: <Award size={20} className="text-purple-400" /> },
-    { label: "Projects Delivered", value: "150+", icon: <Rocket size={20} className="text-indigo-400" /> },
+    { label: "Experience", value: "1 Year", icon: <Award size={20} className="text-purple-400" /> },
+    { label: "Projects Delivered", value: "45+", icon: <Rocket size={20} className="text-indigo-400" /> },
     { label: "Cyber Certs", value: "5", icon: <ShieldCheck size={20} className="text-white" /> },
   ];
 

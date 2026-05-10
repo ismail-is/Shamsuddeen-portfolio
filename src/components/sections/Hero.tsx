@@ -32,6 +32,11 @@ export default function Hero() {
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           className="absolute bottom-[-10%] right-[-5%] w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-indigo-600/30 rounded-full blur-[100px] lg:blur-[150px] mix-blend-screen"
         />
+        <motion.div
+          animate={{ scale: [1, 1.1, 1], opacity: [0.05, 0.15, 0.05] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-[40%] left-[50%] -translate-x-1/2 w-[200px] lg:w-[400px] h-[200px] lg:h-[400px] bg-fuchsia-600/20 rounded-full blur-[60px] lg:blur-[100px] mix-blend-screen"
+        />
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -89,8 +94,8 @@ export default function Hero() {
               {/* Type Animation Box */}
               <div className="h-16 lg:h-12 mt-6">
                 <h3 className="text-xl md:text-3xl font-light text-gray-300 flex flex-col lg:flex-row items-center gap-2">
-                  <span className="text-white font-medium">I am a</span>
-                  <span className="text-purple-400 font-medium">
+                  <span className="text-gray-400 font-light">I am a</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300 font-bold">
                     <TypeAnimation
                       sequence={[
                         "Digital Marketing Specialist", 2000,
@@ -120,22 +125,16 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="group relative w-full sm:w-auto px-8 py-4 bg-white text-[#110720] rounded-full font-bold transition-all flex items-center justify-center gap-3 overflow-hidden hover:scale-[1.05] active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+                className="group relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-bold transition-all flex items-center justify-center gap-3 overflow-hidden hover:scale-[1.05] active:scale-95 shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Start a Project
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
+                <span className="absolute inset-0 w-1/2 h-full bg-white/20 skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out"></span>
               </a>
 
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                className="group w-full sm:w-auto px-8 py-4 bg-[#110720] border border-purple-500/30 hover:border-purple-400 text-white rounded-full font-medium transition-all flex items-center justify-center gap-3 hover:bg-purple-900/20 active:scale-95"
-              >
-                View Resume
-                <Download size={18} className="group-hover:-translate-y-1 transition-transform text-purple-400" />
-              </a>
+
             </motion.div>
           </div>
 

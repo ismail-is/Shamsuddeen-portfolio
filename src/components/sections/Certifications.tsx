@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Award, ExternalLink } from "lucide-react";
 
 const certs = [
-  { name: "Digital Marketing Certificate", org: "Google / Meta", color: "from-purple-500/20 to-transparent" },
-  { name: "Cyber Security Certificate", org: "Cisco / CompTIA", color: "from-indigo-500/20 to-transparent" },
+  { name: "Digital Marketing Certificate", org: "Google / Meta (E26 media pvt ltd)", color: "from-purple-500/20 to-transparent" },
+  { name: "Cyber Security Certificate", org: "EYEQ DOT NET PVT LTD", color: "from-indigo-500/20 to-transparent" },
   { name: "Introduction to Human Communication", org: "University Course", color: "from-blue-500/20 to-transparent" },
-  { name: "Introduction to Ethical Hacking", org: "Cyber Academy", color: "from-purple-500/20 to-transparent" },
+  { name: "Introduction to Ethical Hacking", org: "Offenso Hackers Academy", color: "from-purple-500/20 to-transparent" },
 ];
 
 export default function Certifications() {

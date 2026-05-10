@@ -16,12 +16,21 @@ const experiences = [
   },
   {
     title: "Cyber Security Trainee",
-    company: "Tech Academy",
+    company: "EYEQ DOT NET PVT LTD",
     period: "2023 - 2024",
     description: "Executed intensive hands-on vulnerability assessments. Mastered ethical hacking techniques, network security protocols, and threat mitigation.",
     skills: ["Penetration Testing", "Network Security", "Risk Assessment"],
     icon: <Shield className="text-indigo-400" size={24} />,
     color: "from-indigo-500 to-indigo-800"
+  },
+  {
+    title: "Cyber Security Trainee",
+    company: "Offenso Hackers Academy",
+    period: "2023",
+    description: "Intensive training in ethical hacking, vulnerability assessment, and cyber defense methodologies.",
+    skills: ["Ethical Hacking", "Vulnerability Assessment", "Cyber Defense"],
+    icon: <Shield className="text-indigo-400" size={24} />,
+    color: "from-purple-500 to-indigo-800"
   },
   {
     title: "E-Commerce Manager",
