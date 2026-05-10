@@ -26,7 +26,7 @@ const experiences = [
   {
     title: "Cyber Security Trainee",
     company: "EYEQ DOT NET PVT LTD",
-    period: "2023 - 2024",
+   
     description: "Executed intensive hands-on vulnerability assessments. Mastered ethical hacking techniques, network security protocols, and threat mitigation.",
     skills: ["Penetration Testing", "Network Security", "Risk Assessment"],
     icon: <Shield className="text-indigo-400" size={24} />,
@@ -35,7 +35,7 @@ const experiences = [
   {
     title: "Cyber Security Trainee",
     company: "Offenso Hackers Academy",
-    period: "2023",
+   
     description: "Intensive training in ethical hacking, vulnerability assessment, and cyber defense methodologies.",
     skills: ["Ethical Hacking", "Vulnerability Assessment", "Cyber Defense"],
     icon: <Shield className="text-indigo-400" size={24} />,
@@ -44,7 +44,7 @@ const experiences = [
   {
     title: "E-Commerce Manager",
     company: "Local Retailer",
-    period: "2021 - 2022",
+   
     description: "Engineered digital storefronts for maximum conversion. Optimized UI/UX product pipelines and increased gross sales by 40% via hyper-targeted ad scaling.",
     skills: ["Shopify", "Facebook Ads", "Conversion Optimization"],
     icon: <Briefcase className="text-white" size={24} />,
@@ -206,10 +206,12 @@ export default function Experience() {
                           {exp.icon}
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 px-3 lg:px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
-                        <Calendar size={12} className="text-purple-400" />
-                        <span className="text-xs lg:text-sm font-medium text-gray-300">{exp.period}</span>
-                      </div>
+                      {exp.period && (
+                        <div className="flex items-center gap-2 px-3 lg:px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+                          <Calendar size={12} className="text-purple-400" />
+                          <span className="text-xs lg:text-sm font-medium text-gray-300">{exp.period}</span>
+                        </div>
+                      )}
                     </div>
                     
                     <h3 className="text-xl lg:text-2xl font-bold text-white mb-1 lg:mb-2 relative z-10 tracking-tight">{exp.title}</h3>
