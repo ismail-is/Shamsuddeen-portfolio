@@ -16,7 +16,8 @@ const certs = [
     name: "Cyber Security Certificate", 
     org: "EYEQ DOT NET PVT LTD", 
     color: "from-indigo-500/20 to-transparent",
-    file: "/images/Certificate/MAHAMMAD SHAMSUDDIN Certificate_page-0001.jpg"
+     file: "/images/Certificate/Mohammad shamsuddeen Internship Completion Certificate_page-0001.jpg"
+
   },
   { 
     name: "Introduction to Human Communication", 
@@ -28,7 +29,7 @@ const certs = [
     name: "Introduction to Ethical Hacking", 
     org: "Offenso Hackers Academy", 
     color: "from-purple-500/20 to-transparent",
-    file: "/images/Certificate/Mohammad shamsuddeen Internship Completion Certificate_page-0001.jpg"
+       file: "/images/Certificate/MAHAMMAD SHAMSUDDIN Certificate_page-0001.jpg"
   },
 ];
 

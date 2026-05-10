@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="md:col-span-5 space-y-6 lg:space-y-8 text-center md:text-left">
             <div>
               <Link href="#home" className="text-3xl lg:text-4xl font-bold font-space text-white inline-block mb-4 hover:scale-105 transition-transform">
-                Shamsuddeen<span className="text-purple-500">.</span>
+                M.Shamsuddeen<span className="text-purple-500">.</span>
               </Link>
               <p className="text-gray-400 text-base lg:text-lg max-w-sm leading-relaxed mx-auto md:mx-0">
                 Elevating brands through data-driven digital marketing and securing them with elite cyber defense.

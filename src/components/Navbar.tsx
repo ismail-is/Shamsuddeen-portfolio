@@ -52,7 +52,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="#home" className="text-xl lg:text-2xl font-bold font-space text-white flex items-center gap-1 group">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:to-white transition-all">Shamsuddeen</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 group-hover:to-white transition-all">M.Shamsuddeen</span>
             <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-purple-500 group-hover:scale-150 transition-transform duration-300 shadow-[0_0_10px_#a855f7]"></span>
           </Link>
 

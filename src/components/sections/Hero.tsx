@@ -12,7 +12,7 @@ export default function Hero() {
       {/* 1. MASSIVE BACKGROUND WATERMARK TEXT */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center pointer-events-none select-none z-0 opacity-[0.03]">
         <h1 className="text-[25vw] lg:text-[15vw] font-black tracking-tighter text-white whitespace-nowrap">
-          SHAMSUDDEEN
+          M.SHAMSUDDEEN
         </h1>
       </div>
 
