@@ -7,6 +7,15 @@ import { useRef } from "react";
 const experiences = [
   {
     title: "Digital Marketing Specialist",
+    company: "Culture Highway",
+    period: "2026 - Present",
+    description: "Driving digital growth and brand visibility through strategic marketing campaigns, content creation, and analytics.",
+    skills: ["Digital Marketing", "Brand Strategy", "Social Media", "SEO"],
+    icon: <Target className="text-purple-400" size={24} />,
+    color: "from-purple-500 to-indigo-800"
+  },
+  {
+    title: "Digital Marketing Specialist",
     company: "Freelance",
     period: "2022 - Present",
     description: "Architecting full-funnel digital marketing strategies. Scaling brands through high-ROI SEO, advanced SEM, and data-driven social media campaigns.",

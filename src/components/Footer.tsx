@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
-import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaPinterest, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
@@ -73,13 +73,16 @@ export default function Footer() {
             <h3 className="text-lg lg:text-xl font-bold text-white mb-4 lg:mb-6 uppercase tracking-widest text-xs opacity-50">Socials</h3>
             <div className="flex flex-col gap-3 lg:gap-4 max-w-xs mx-auto md:mx-0">
               {[
-                { name: "LinkedIn", icon: <FaLinkedinIn size={18} />, href: "#" },
-                { name: "GitHub", icon: <FaGithub size={18} />, href: "#" },
-                { name: "Instagram", icon: <FaInstagram size={18} />, href: "#" },
+                { name: "LinkedIn", icon: <FaLinkedinIn size={18} />, href: "https://www.linkedin.com/in/mahammad-shamsuddeen-6785913b9?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
+                { name: "Instagram", icon: <FaInstagram size={18} />, href: "https://www.instagram.com/sh4msu_?igsh=MWhmZjZ4cWw3ZTY0dg%3D%3D&utm_source=qr" },
+                { name: "Pinterest", icon: <FaPinterest size={18} />, href: "https://pin.it/5N810kfMO" },
+                { name: "WhatsApp", icon: <FaWhatsapp size={18} />, href: "https://wa.me/918317329671?text=Hello%20Shamsuddeen,%20I'm%20interested%20in%20your%20services!" },
               ].map((social, idx) => (
                 <a 
                   key={idx}
                   href={social.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="group flex items-center justify-between p-3 lg:p-4 rounded-xl lg:rounded-2xl bg-white/5 border border-white/5 hover:border-purple-500/30 hover:bg-white/10 transition-all duration-300 active:scale-95"
                 >
                   <div className="flex items-center gap-3 lg:gap-4 text-gray-300 group-hover:text-white transition-colors">

@@ -28,8 +28,8 @@ const skillCategories = [
   },
   {
     title: "E-Commerce",
-    icon: <ShoppingCart className="text-white" size={24} />,
-    color: "gray",
+    icon: <ShoppingCart className="text-indigo-400" size={24} />,
+    color: "indigo",
     skills: [
       { name: "Shopify / WooCommerce", level: 95 },
       { name: "Conversion Optimization", level: 92 },

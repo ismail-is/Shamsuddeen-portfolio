@@ -23,7 +23,7 @@ const education = [
   {
     period: "2012 - 2019",
     degree: "Primary School",
-    institution: "DKZP GOVT.  SCHOOL THALITHANOOJI",
+    institution: "DKZP GOVT.  School Thalithanooji",
     description: "Early educational background with a focus on holistic learning and extracurricular activities.",
     icon: <School size={24} />,
     color: "from-fuchsia-500",

@@ -1,18 +1,56 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Award, ExternalLink } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Award, ExternalLink, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const certs = [
-  { name: "Digital Marketing Certificate", org: "Google / Meta (E26 media pvt ltd)", color: "from-purple-500/20 to-transparent" },
-  { name: "Cyber Security Certificate", org: "EYEQ DOT NET PVT LTD", color: "from-indigo-500/20 to-transparent" },
-  { name: "Introduction to Human Communication", org: "University Course", color: "from-blue-500/20 to-transparent" },
-  { name: "Introduction to Ethical Hacking", org: "Offenso Hackers Academy", color: "from-purple-500/20 to-transparent" },
+  { 
+    name: "Digital Marketing Certificate", 
+    org: "Google / Meta (E26 media pvt ltd)", 
+    color: "from-purple-500/20 to-transparent",
+    message: "Digital Marketing Certificate document is currently being processed and will be available online soon."
+  },
+  { 
+    name: "Cyber Security Certificate", 
+    org: "EYEQ DOT NET PVT LTD", 
+    color: "from-indigo-500/20 to-transparent",
+    file: "/images/Certificate/MAHAMMAD SHAMSUDDIN Certificate_page-0001.jpg"
+  },
+  { 
+    name: "Introduction to Human Communication", 
+    org: "University Course", 
+    color: "from-blue-500/20 to-transparent",
+    message: "This certificate is part of the university academic records. Available upon request."
+  },
+  { 
+    name: "Introduction to Ethical Hacking", 
+    org: "Offenso Hackers Academy", 
+    color: "from-purple-500/20 to-transparent",
+    file: "/images/Certificate/Mohammad shamsuddeen Internship Completion Certificate_page-0001.jpg"
+  },
 ];
 
 export default function Certifications() {
+  const [selectedCert, setSelectedCert] = useState<typeof certs[0] | null>(null);
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (selectedCert) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedCert]);
+
   return (
-    <section id="certifications" className="py-20 lg:py-24 relative overflow-hidden bg-transparent">
+    <section id="certifications" className={`py-20 lg:py-24 relative overflow-hidden bg-transparent ${selectedCert ? 'z-[100]' : 'z-10'}`}>
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
         <motion.div
@@ -40,7 +78,8 @@ export default function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative active:scale-[0.98] transition-transform"
+              className="group relative active:scale-[0.98] transition-transform cursor-pointer"
+              onClick={() => setSelectedCert(cert)}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
               
@@ -63,6 +102,68 @@ export default function Certifications() {
             </motion.div>
           ))}
         </div>
+
+        {/* Modal / Popup */}
+        <AnimatePresence>
+          {selectedCert && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setSelectedCert(null)}
+                className="absolute inset-0 bg-black/80 backdrop-blur-md"
+              />
+
+              {/* Modal Content */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                className="relative w-full max-w-4xl bg-[#0a0414] border border-white/10 rounded-3xl overflow-hidden shadow-2xl z-10"
+              >
+                {/* Header */}
+                <div className="p-6 border-bottom border-white/5 flex justify-between items-center bg-white/5">
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{selectedCert.name}</h3>
+                    <p className="text-sm text-gray-400">{selectedCert.org}</p>
+                  </div>
+                  <button
+                    onClick={() => setSelectedCert(null)}
+                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-purple-500 transition-colors"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
+
+                {/* Body */}
+                <div className="p-6 max-h-[70vh] overflow-auto">
+                  {selectedCert.file ? (
+                    <div className="relative aspect-[3/2] w-full bg-white/5 rounded-xl overflow-hidden">
+                      <Image
+                        src={selectedCert.file}
+                        alt={selectedCert.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="py-12 text-center">
+                      <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Award size={32} className="text-purple-400" />
+                      </div>
+                      <p className="text-gray-300 text-lg max-w-md mx-auto">
+                        {selectedCert.message}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
 
       </div>
     </section>
